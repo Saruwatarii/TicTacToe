@@ -16,7 +16,7 @@ print("|", cells[6], cells[7], cells[-1], "|")
 print("---------")
 
 user_move = input("Enter the coordinates: ")
-
+# Check if the user input the right coordinatoes and check if the input a integer
 while True:
     if user_move[0].isdigit() and user_move[2].isdigit():
         break
@@ -32,6 +32,7 @@ while True:
         True
     else:
         break
+
 
 flag = True
 while flag:
