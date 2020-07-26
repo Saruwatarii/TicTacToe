@@ -7,11 +7,7 @@ The first player that writes 3 'X' or 3 'O' in a straight line (including diagon
 
 # Visualize different combinations that the user will determine from the input
 
-moves = input('Enter cells: ')
-cells = []
-
-for move in moves:
-    cells.append(move)
+cells = [ x for x in input('Enter cells: ')]
 
 print("---------")
 print("|", cells[0], cells[1], cells[2], "|")
@@ -22,15 +18,12 @@ print("---------")
 user_move = input("Enter the coordinates: ")
 
 while True:
-
     if user_move[0].isdigit() and user_move[2].isdigit():
         break
     else:
         print("You should enter numbers!")
         user_move = input("Enter the coordinates: ")
         True
-
-higher = False
 
 while True:
     if int(user_move[0]) > 3 or int(user_move[2]) > 3:
@@ -123,14 +116,11 @@ while flag:
             cells[2] = "X"
             flag = False
 
-
 print("---------")
 print("|", cells[0], cells[1], cells[2], "|")
 print("|", cells[3], cells[4], cells[5], "|")
 print("|", cells[6], cells[7], cells[-1], "|")
 print("---------")
-
-
 
 '''
 row0 = [cells[0], cells[1], cells[2]]
